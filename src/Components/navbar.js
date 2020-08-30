@@ -21,13 +21,24 @@ var mapDispatchToProps = (dispatch) => {
 
 class NavBar extends React.Component {
 	render() {
-		return <div style={{
-			backgroundImage: `url(${require('../Slices/nav_bar.png')})`
-		}}>
-			<img src={Back} alt="Back symbol"></img>
-			<input type="search" value={this.props.searchText} onChange={this.props.onSearchChange} autoFocus/>
-			<img src={Search} alt="Search symbol"></img>
-		</div>
+		return <nav
+			style={{ backgroundImage: `url(${require('../Slices/nav_bar.png')})` }}
+			className="fixed w-full z-10 pin-t bg-fixed"	>
+			<img
+				src={Back}
+				alt="Back symbol"
+				className="inline-block" />
+			<input
+				type="search"
+				className="inline-block"
+				value={this.props.searchText}
+				onChange={this.props.onSearchChange}
+				autoFocus />
+			<img
+				className="inline-block"
+				src={Search}
+				alt="Search symbol" />
+		</nav>
 	}
 }
 

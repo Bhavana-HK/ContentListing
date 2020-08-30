@@ -17,7 +17,7 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div className="bg-black bg-opacity-95 font-custom">
+      <div className="bg-black bg-opacity-95 font-custom mx-auto w-full h-full max-h-full">
         <NavBar />
         <ScrollView />
       </div>

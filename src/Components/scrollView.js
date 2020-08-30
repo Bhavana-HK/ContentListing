@@ -30,7 +30,10 @@ const Card = (props) => {
 class ScrollView extends React.Component {
 	get mainPanel() {
 		if (isEmpty(this.props.items))
-			return "No results found for the given expression. Try another"
+			return <div
+				className="text-center text-5xl mx-auto mt-32 my-auto">
+				No results found for the given expression. Try another
+				</div>
 		return this.props.items.map((item, index) => {
 			var image;
 			try {
@@ -45,7 +48,7 @@ class ScrollView extends React.Component {
 	render() {
 		if (this.props.error)
 			return <div>{this.props.error}</div>
-		return <div>{this.mainPanel}</div>
+		return <div className="grid grid-cols-3 row-gap-30px">{this.mainPanel}</div>
 	}
 }
 
