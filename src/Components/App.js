@@ -1,5 +1,4 @@
 import React from 'react';
-import '../Styles/App.css';
 import NavBar from './navbar';
 import { connect } from 'react-redux';
 import { loadData } from '../Actions';
@@ -8,7 +7,7 @@ import ScrollView from './scrollView';
 const mapDispatchToProps = dispatch => {
   return {
     ...dispatch,
-    loadData: () => {dispatch(loadData())}
+    loadData: () => { dispatch(loadData()) }
   }
 }
 
@@ -18,9 +17,9 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div className="App">
+      <div className="bg-black bg-opacity-95 font-custom">
         <NavBar />
-        <ScrollView/>
+        <ScrollView />
       </div>
     );
   }

@@ -16,6 +16,17 @@ var mapDispatchToProps = (dispatch) => {
 	}
 }
 
+const Card = (props) => {
+	return <div className="max-w-sm">
+		<div><img
+			src={props.image}
+			alt={"poster-art-" + props.name}
+			className="w-full"
+		/></div>
+		<div className="text-gray-400 font-light text-5xl mt-6 mb-90px">{props.name}</div>
+	</div>
+}
+
 class ScrollView extends React.Component {
 	get mainPanel() {
 		if (isEmpty(this.props.items))
@@ -27,10 +38,7 @@ class ScrollView extends React.Component {
 			} catch (error) {
 				image = require('../Slices/placeholder_for_missing_posters.png');
 			}
-			return <div key={"content-no-" + index}>
-				<div><img src={image} alt={"poster-art-" + item.name} /></div>
-				<div>{item.name}</div>
-			</div>
+			return <Card name={item.name} image={image} key={index} />
 		})
 	}
 
