@@ -23,7 +23,7 @@ const Card = (props) => {
 			alt={"poster-art-" + props.name}
 			className="w-full"
 		/></div>
-		<div className="text-gray-400 font-light text-5xl mt-6 mb-90px">{props.name}</div>
+		<div className="text-gray-400 font-light text-left sm:text-lg md:text-5xl pt-6 pb-90px">{props.name}</div>
 	</div>
 }
 
@@ -48,7 +48,12 @@ class ScrollView extends React.Component {
 	render() {
 		if (this.props.error)
 			return <div>{this.props.error}</div>
-		return <div className="grid grid-cols-3 row-gap-30px">{this.mainPanel}</div>
+		return <div>
+			<div className=""></div>
+			<div className="grid grid-cols-3 gap-x-30px pt-228px">
+				{this.mainPanel}
+			</div>
+		</div>
 	}
 }
 

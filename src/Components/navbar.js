@@ -22,8 +22,12 @@ var mapDispatchToProps = (dispatch) => {
 class NavBar extends React.Component {
 	render() {
 		return <nav
-			style={{ backgroundImage: `url(${require('../Slices/nav_bar.png')})` }}
-			className="fixed w-full z-10 pin-t bg-fixed"	>
+			style={{
+				backgroundImage: `url(${require('../Slices/nav_bar.png')})`,
+				height: "192px",
+				backgroundRepeat: "repeat-x"
+			}}
+			className="fixed w-full z-10 pin-t"	>
 			<img
 				src={Back}
 				alt="Back symbol"
